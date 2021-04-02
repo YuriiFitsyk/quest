@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import "./App.scss";
+import { QuestOne } from "./QuestOne";
 
 function App() {
+  const [started, setStarted] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="quest">
+        {!started ? (
+          <>
+            <h1 className="quest__title">Щоб почати квест, нажми на кнопку.</h1>
+
+            <p className="quest__desc">Дороги назад не буде!</p>
+
+            <button className="quest__button" onClick={() => setStarted(true)}>
+              Click me!
+            </button>
+          </>
+        ) : (
+          <QuestOne />
+        )}
+      </div>
     </div>
   );
 }
