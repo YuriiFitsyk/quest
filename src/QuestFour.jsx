@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { QuestFour } from "./QuestFour";
+import { Finish } from "./Finish";
 
-export const QuestThree = () => {
+export const QuestFour = () => {
   const [password, setPassword] = useState("");
   const [showError, setShowError] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
@@ -21,10 +21,11 @@ export const QuestThree = () => {
     <>
       {!confirmed ? (
         <>
-          <h3 className="quest__title">Третє завдання</h3>
+          <h3 className="quest__title">Четверте завдання</h3>
           <p className="quest__text">
-            Прекрасно, тебе б точно взяли в Хогвардс! Тепер відкрий історію про
-            жовтоокого парубка та його говорящого коня в бібліотеці. Удачі!
+            Молодець, якби Геральт тебе побачив, забув би про Йенніфер! Тепер
+            тобі потрібно відправитись в далеку путь. В кімнаті для романтичної
+            вечері між спогадами знаходиться наступна підказка. Удачі!
           </p>
           <div className="quest__input--container">
             <input
@@ -43,7 +44,7 @@ export const QuestThree = () => {
           </button>
         </>
       ) : (
-        <QuestFour />
+        <Finish />
       )}
     </>
   );

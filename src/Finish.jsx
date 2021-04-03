@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { QuestThree } from "./QuestThree";
-
 export const Finish = () => {
   return (
     <>
