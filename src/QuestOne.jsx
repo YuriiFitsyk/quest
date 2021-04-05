@@ -7,7 +7,7 @@ export const QuestOne = () => {
   const [confirmed, setConfirmed] = useState(false);
 
   const submitHandler = () => {
-    if (password === "qwertyasd") {
+    if (password.toLowerCase() === process.env.REACT_APP_ONE.toLowerCase()) {
       setConfirmed(true);
       setPassword("");
     } else {
